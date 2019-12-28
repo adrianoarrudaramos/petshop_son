@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>
+			{% block title %}{% endblock %}PetShop SON</title>
+
+		<!-- Principal CSS do Bootstrap -->
+		<link
+		href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Estilos customizados para esse template -->
+		<link href="/assets/css/starter-template.css" rel="stylesheet">
+		<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=JMuSQ_b3rZT94YRFI64AQaTbyHffG-UfTEQNRpJd5pTMwbykFITNASJsyArisPBw5Zrecv2sDCsfRwqgFWoyobigPEQvXuMHj0Q7tP8ktW4zj1DP_4pBl1Nz8QHVae3i" charset="UTF-8"></script>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="{{ path('default') }}">PetShop SON</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ path('default') }}">Home
+							<span class="sr-only">(atual)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('listar_clientes') }}">Clientes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('listar_animais') }}">Animais</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<main role="main" class="container"> {% block body %}{% endblock %}
+
+			</main>
+			<!-- /.container -->
+
+			<!-- Principal JavaScript do Bootstrap
+												    ================================================== -->
+			<!-- Foi colocado no final para a página carregar mais rápido --><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>
+			<script src="/assets/js/bootstrap.min.js"></script>
+		</body>
+
+	</html>
