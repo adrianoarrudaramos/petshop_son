@@ -40,7 +40,7 @@ class Cliente
     /**
      * @var object
      * 
-     * @ORM\ManyToOne(targetEntity="App\Entity\Endereco", inversedBy="id")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Endereco", inversedBy="id", cascade={"persist"})
      */
     private $endereco;
 
@@ -137,11 +137,11 @@ class Cliente
     /**
      * Set the value of endereco
      *
-     * @param  object  $endereco
+     * @param  Endereco  $endereco
      *
      * @return  self
      */
-    public function setEndereco(object $endereco)
+    public function setEndereco(Endereco $endereco)
     {
         $this->endereco = $endereco;
 

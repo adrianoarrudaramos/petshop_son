@@ -5,11 +5,27 @@
 
 {% block body %}
 
+	{% for flashMessage in app.session.flashbag.get('success') %}
+	<div class="alert alert-success">
+		{{ flashMessage }}
+	</div>
+	{% endfor %}
+	{% for flashMessage in app.session.flashbag.get('warning') %}
+	<div class="alert alert-warning">
+		{{ flashMessage }}
+	</div>
+	{% endfor %}
+	{% for flashMessage in app.session.flashbag.get('error') %}
+	<div class="alert alert-error">
+		{{ flashMessage }}
+	</div>
+	{% endfor %}
+
 	<h1>Listagem de clientes</h1>
 	<hr>
 	<div class="row">
 		<div class="col-md-12">
-			<a href="" class="btn btn-primary pull-right">Cadastrar Cliente</a>
+			<a href="{{ path('cadastrar_cliente') }}" class="btn btn-primary pull-right">Cadastrar Cliente</a>
 		</div>
 	</div>
 	<table class="table table-hover table-striped mt-3">

@@ -41,6 +41,23 @@
 			<th>Bairro</th>
 			<td>{{ cliente.endereco.bairro }}</td>
 		</tr>
+		<tr>
+			<th colspan="2">Animais</th>
+		</tr>
+		<tr>
+			<th></th>
+			<td>
+				<ul>
+					{% for animal in cliente.animal %}
+						<li>
+							<a href="{{ path('visualizar_animal', {'id': animal.id}) }}">{{ animal.nome }}</a>
+						</li>						
+					{% else %}
+						<li>Nenhum animal para esse cliente</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
 	</table>
 
 {% endblock %}
